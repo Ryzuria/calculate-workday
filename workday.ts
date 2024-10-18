@@ -79,8 +79,6 @@ async function start() {
   }
   const numDates = numberOfDays(startDate, endDate);
   const holiday = countHoliday(dates, startDate, endDate);
-  console.log("Number of holiday:", holiday);
-  
   const satSun = countSatSun(startDate, endDate);
   console.log("====================================");
   const workday = numDates - satSun - holiday;
