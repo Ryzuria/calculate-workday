@@ -1,6 +1,6 @@
 # calculate-workday
 
-This is a simple script to calculate workday within a month.
+This is a simple script to calculate workday within a month including Thailand holiday.
 
 ## Pre-steps
 
