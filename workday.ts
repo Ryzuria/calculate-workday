@@ -20,6 +20,7 @@ function countHoliday(
       dayOfWeek !== 0 &&
       dayOfWeek !== 6
     ) {
+      console.log(dateStr);
       count++;
     }
   }
@@ -66,8 +67,10 @@ async function start() {
     console.log("Swapping start and end month");
     [startMonth, endMonth] = [endMonth, startMonth];
   }
-  const startDate = new Date(`2024-${startMonth}-26`);
-  const endDate = new Date(`2024-${endMonth}-25`);
+  const today = new Date();
+
+  const startDate = new Date(`${today.getFullYear()}-${startMonth}-26`);
+  const endDate = new Date(`${today.getFullYear()}-${endMonth}-25`);
 
   const rawData = fs.readFileSync("holiday.json", "utf8");
   const data = JSON.parse(rawData);
